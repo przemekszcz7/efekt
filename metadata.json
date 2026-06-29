@@ -1,0 +1,6 @@
+{
+  "name": "Firma Sprzątająca EFEKT",
+  "description": "Nowoczesna i profesjonalna strona internetowa dla firmy sprzątającej EFEKT z Koszalina i okolic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

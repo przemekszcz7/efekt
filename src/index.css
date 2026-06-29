@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --color-primary: #0f5f53;
+  --color-primary-dark: #072e28;
+  --color-primary-light: #167e6e;
+  --color-accent: #cca565;
+  --color-accent-light: #dec090;
+  --color-accent-dark: #9e7d44;
+}
+
+/* Custom CSS for supreme precision styling */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #f9f9f8;
+    color: #1f2937;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Luxury card with subtle golden tint border */
+.premium-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 45px 35px;
+  box-shadow: 0 10px 40px rgba(15, 95, 83, 0.03);
+  border: 1px solid rgba(15, 95, 83, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(15, 95, 83, 0.08);
+  border-color: rgba(204, 165, 101, 0.25);
+}
+
+/* Lightbox overlay for premium image zoom */
+.custom-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 46, 40, 0.98);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Smooth zoom animation */
+.zoom-hover img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-hover:hover img {
+  transform: scale(1.06);
+}
+
+/* Neon-green pulse animation for response times */
+@keyframes greenPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.pulse-green {
+  animation: greenPulse 2s infinite;
+}
